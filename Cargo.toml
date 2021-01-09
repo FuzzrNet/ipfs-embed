@@ -2,12 +2,12 @@
 members = ["core", "db", "net"]
 
 [package]
-name = "ipfs-embed"
+name = "fuzzr-ipfs-embed"
 version = "0.9.0"
 authors = ["David Craven <david@craven.ch>"]
 edition = "2018"
 license = "MIT OR Apache-2.0"
-description = "small embeddable ipfs implementation"
+description = "Fuzzr fork of ipfs-embed, a small embeddable ipfs implementation"
 repository = "https://github.com/ipfs-rust/ipfs-embed"
 
 [features]
@@ -33,10 +33,13 @@ async-std = { version = "1.8.0", features = ["attributes"] }
 #criterion = "0.3.3"
 env_logger = "0.8.2"
 #ipld-collections = "0.2.0"
-libipld = { version = "0.8.2", default-features = false, features = ["dag-cbor", "derive"] }
+libipld = { version = "0.8.2", default-features = false, features = [
+  "dag-cbor",
+  "derive"
+] }
+
 #model = "0.1.2"
 #tempdir = "0.3.7"
-
 [profile.release]
 debug = true
 
